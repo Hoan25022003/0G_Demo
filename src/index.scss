@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@layer base {
+  .stats-text-shadow {
+    text-shadow: 0 4px 10px hsla(0, 0%, 100%, 0.4),
+      0 10px 15px hsla(0, 0%, 100%, 0.2), 0 0 0 hsla(0, 0%, 100%, 0.1);
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    & .tooltiptext {
+      visibility: hidden;
+      background-color: #333333;
+      color: #fff;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 6px;
+      position: absolute;
+      font-size: 15px;
+      top: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 100;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        rotate: 180deg;
+        border-width: 6px;
+        border-style: solid;
+        border-color: #333333 transparent transparent transparent;
+      }
+    }
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  @apply text-blackColor;
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
