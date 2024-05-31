@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import MainLayout from "./layouts/MainLayout";
 import Header from "./layouts/Header";
 
-
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -15,17 +14,14 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <div className="relative min-h-screen pb-[120px] overflow-hidden bg-white xl:pb-0">
           <img
-            className="absolute top-0 left-0 z-0 object-cover w-full h-full"
-           src="/img_background.png"
-            
-          >
-          </img>
+            className="absolute top-0 left-0 z-0 object-cover w-full h-full opacity-50"
+            src="/img_background.png"
+          ></img>
 
           <div className="relative z-10">
             <Header />
             <MainLayout />
           </div>
-          
         </div>
         <ToastContainer />
       </QueryClientProvider>

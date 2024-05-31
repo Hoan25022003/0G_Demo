@@ -3,19 +3,24 @@ import PropTypes from "prop-types";
 import { Loader2 } from "lucide-react";
 
 const ButtonPrimary = React.forwardRef(
-  ({ className, children, loading, onClick, ...props }, ref) => {
+  (
+    { className, children, loading, onClick, primary = true, ...props },
+    ref
+  ) => {
     return (
       <button
-        className={`text-sm font-bold text-textColor transition-all rounded-full bg-primaryColor hover:bg-hoverPrimaryColor ${className} ${
-          loading && "bg-opacity-50 pointer-events-none"
-        }`}
+        className={`text-base font-bold transition-all rounded-full ${
+          primary
+            ? "bg-primaryColor hover:bg-hoverPrimaryColor text-whiteColor"
+            : "bg-transparent border border-primaryColor text-primaryColor hover:bg-primaryColor hover:bg-opacity-10"
+        } ${className} ${loading && "bg-opacity-50 pointer-events-none"}`}
         onClick={onClick}
         ref={ref}
         disabled={loading}
         {...props}
       >
         {loading ? (
-          <div className="min-w-[130px] flex justify-center">
+          <div className="flex justify-center">
             <Loader2 className="w-5 h-5 animate-spin" />
           </div>
         ) : (
@@ -33,6 +38,7 @@ ButtonPrimary.propTypes = {
   children: PropTypes.node,
   loading: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
+  primary: PropTypes.bool,
 };
 
 export default ButtonPrimary;
