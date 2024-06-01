@@ -24,9 +24,8 @@ const App = () => {
             <MainLayout />
           </div>
         </div>
-        <Footer/>
+        <Footer />
         <ToastContainer />
-        
       </QueryClientProvider>
     </WagmiProvider>
   );

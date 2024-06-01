@@ -23,6 +23,7 @@ const FormTransaction = () => {
 
   const [errors, setErrors] = useState();
   const [loading, setLoading] = useState(false);
+  const [joinPool, setJoinPool] = useState(false);
 
   const { address } = useAccount();
   const chainId = useChainId();
@@ -80,6 +81,13 @@ const FormTransaction = () => {
       formatted: balanceBn.toString(),
     };
   }, [rawBalance]);
+
+  const onJoinPool = () => {
+    showToast("success", "Join pool successful", {
+      autoClose: 3000,
+    });
+    setJoinPool(true);
+  };
 
   const onClickMax = useCallback(() => {
     const balanceValue = balance?.value;
@@ -180,39 +188,39 @@ const FormTransaction = () => {
     }
   }, [errors]);
 
-  return (
-    <div className="flex flex-col items-center w-full p-5 bg-white border shadow-2xl rounded-large border-primaryColor">
-      <div className="flex flex-col w-full gap-y-1">
-        <div className="flex items-end justify-between">
-          <p className="text-base font-semibold">Amount</p>
-          <small
-            className={`font-medium opacity-70 ${
-              isConnected &&
-              "hover:text-secondColor cursor-pointer transition-all"
-            }`}
-            onClick={isConnected ? onClickMax : undefined}
-          >
-            {`Available ${
-              balance.formattedNumber
-                ? `${new Intl.NumberFormat("en-US").format(
-                    balance.formattedNumber
-                  )} USDT`
-                : "0 USDT"
-            }`}
-          </small>
+  return isConnected ? (
+    joinPool ? (
+      <div className="flex flex-col items-center w-full p-5 bg-white border shadow-2xl rounded-large border-primaryColor">
+        <div className="flex flex-col w-full gap-y-1">
+          <div className="flex items-end justify-between">
+            <p className="text-base font-semibold">Amount</p>
+            <small
+              className={`font-medium opacity-70 ${
+                isConnected &&
+                "hover:text-secondColor cursor-pointer transition-all"
+              }`}
+              onClick={isConnected ? onClickMax : undefined}
+            >
+              {`Available ${
+                balance.formattedNumber
+                  ? `${new Intl.NumberFormat("en-US").format(
+                      balance.formattedNumber
+                    )} USDT`
+                  : "0 USDT"
+              }`}
+            </small>
+          </div>
+          <div className="relative w-full mb-4 lg:mb-5">
+            <input
+              type="number"
+              className="w-full tracking-wider px-5 py-[14px] text-xl transition-all bg-borderColor rounded-lg outline-none focus:bg-grayColor"
+              disabled={isDisabledInput}
+              placeholder="0.0000"
+              value={inputValue}
+              onChange={onChangeInputValue}
+            />
+          </div>
         </div>
-        <div className="relative w-full mb-4 lg:mb-5">
-          <input
-            type="number"
-            className="w-full tracking-wider px-5 py-[14px] text-xl transition-all bg-borderColor rounded-lg outline-none focus:bg-grayColor"
-            disabled={isDisabledInput}
-            placeholder="0.0000"
-            value={inputValue}
-            onChange={onChangeInputValue}
-          />
-        </div>
-      </div>
-      {isConnected ? (
         <div className="grid w-full grid-cols-2 px-5 font-bold gap-x-5">
           <button
             className="uppercase transition-all bg-transparent border-2 rounded-full hover:bg-secondColor hover:bg-opacity-10 text-secondColor border-secondColor"
@@ -227,12 +235,22 @@ const FormTransaction = () => {
             Send
           </ButtonPrimary>
         </div>
-      ) : (
-        <button className="w-full text-[12px] text-lg px-4 py-3 font-bold text-white rounded-full opacity-50 pointer-events-none bg-primaryColor select-none">
-          Please connect your wallet
-        </button>
-      )}
-    </div>
+      </div>
+    ) : (
+      <ButtonPrimary
+        className="w-full px-4 py-3 capitalize"
+        onClick={onJoinPool}
+      >
+        Join pool
+      </ButtonPrimary>
+    )
+  ) : (
+    <ButtonPrimary
+      primary={false}
+      className="w-full px-4 py-3 rounded-full pointer-events-none select-none"
+    >
+      Please connect your wallet
+    </ButtonPrimary>
   );
 };
 

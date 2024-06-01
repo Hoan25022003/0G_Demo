@@ -1,41 +1,40 @@
-
 const Footer = () => (
   <footer className="bg-gradient-to-r from-[#FE7D82] to-[#FFAF90]">
-    <div className="mx-auto w-full max-w-screen-xl">
-      <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5 ml-6 sm:ml-10 lg:ml-12">
-      <a
-        href={"/"}
-        className="flex items-start justify-start gap-x-3 lg:gap-x-5"
-      >
-        <img className="w-[90px]" src="0G-Logo-White.png" alt="" />
-      </a>
+    <div className="max-w-screen-xl px-10 mx-auto">
+      <div className="grid grid-cols-2 gap-8 px-4 py-6 ml-6 lg:py-8 md:grid-cols-5 sm:ml-10 lg:ml-12">
+        <a
+          href={"/"}
+          className="flex items-start justify-start gap-x-3 lg:gap-x-5"
+        >
+          <img className="w-[90px]" src="0G-Logo-White.png" alt="" />
+        </a>
         <div>
           <h2 className="mb-6 text-sm font-semibold text-white uppercase">
-          Develop
+            Develop
           </h2>
-          <ul className="text-white font-medium">
+          <ul className="font-medium text-white">
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Build
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Testnet
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Run a node
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Faucet
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Docs
               </a>
             </li>
@@ -43,21 +42,21 @@ const Footer = () => (
         </div>
         <div>
           <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
-          Learn
+            Learn
           </h2>
-          <ul className="text-white font-medium">
+          <ul className="font-medium text-white">
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Blog
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 AMAs
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 FAQs
               </a>
             </li>
@@ -65,45 +64,44 @@ const Footer = () => (
         </div>
         <div>
           <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
-          Ecosystem
+            Ecosystem
           </h2>
-          <ul className="text-white dark:text-gray-400 font-medium">
+          <ul className="font-medium text-white dark:text-gray-400">
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Community
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Partner
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Press
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Careers
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:text-primary transition-all">
+              <a href="#" className="transition-all hover:text-primary">
                 Media kit
               </a>
             </li>
           </ul>
         </div>
-    
       </div>
       <hr className="border-white sm:mx-auto" />
 
-      <div className="px-4 py-5 grid grid-rows-2 gap-2 items-center justify-center sm:flex sm:justify-between">
+      <div className="grid items-center justify-center grid-rows-2 gap-2 px-4 py-5 sm:flex sm:justify-between">
         <span className="text-sm text-white dark:text-gray-300 sm:text-center">
           © 2024 <a href="">XGroup</a>. All Rights Reserved.
         </span>
-        <div className="flex justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+        <div className="flex justify-center space-x-5 md:mt-0 rtl:space-x-reverse">
           <svg
             className="w-4 h-4 text-white"
             aria-hidden="true"

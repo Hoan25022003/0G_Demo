@@ -15,7 +15,7 @@ export default {
       colors: {
         primaryColor: "#CF32E5",
         hoverPrimaryColor: "#9E22A9",
-        secondColor: "#6642c8",
+        secondColor: "#FE7D82",
         grayColor: "#E2E2E2",
         borderColor: "#F2F2F2",
         blackColor: "#35250f",

@@ -9,7 +9,7 @@ const ButtonPrimary = React.forwardRef(
   ) => {
     return (
       <button
-        className={`text-sm md:text-base font-bold transition-all rounded-full ${
+        className={`text-sm md:text-base lg:text-lg font-bold transition-all rounded-full ${
           primary
             ? "bg-primaryColor hover:bg-hoverPrimaryColor text-whiteColor"
             : "bg-transparent border border-primaryColor text-primaryColor hover:bg-primaryColor hover:bg-opacity-10"
@@ -21,7 +21,7 @@ const ButtonPrimary = React.forwardRef(
       >
         {loading ? (
           <div className="flex justify-center">
-            <Loader2 className="w-5 h-5 animate-spin" />
+            <Loader2 className="w-[22px] h-[22px] animate-spin" />
           </div>
         ) : (
           children
