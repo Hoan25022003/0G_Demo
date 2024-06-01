@@ -7,7 +7,8 @@ const TetherContent = () => {
   const shortenedAddress = useShortenAddress(USDT_CONTRACT[chainId]);
   return (
     <div className="relative left-0 flex justify-center w-full">
-      <div className="flex items-center justify-between w-full md:w-[45%] lg:w-[40%] xl:w-[35%] px-5 py-3 sm:px-7 sm:py-4 bg-white rounded-[20px] sm:rounded-[30px] bg-opacity-75">
+      {/* w-full md:w-[45%] lg:w-[40%] xl:w-[35%] */}
+      <div className="flex items-center justify-between w-full  px-5 py-3 sm:px-7 sm:py-4 bg-white rounded-[20px] sm:rounded-[30px] bg-opacity-75 border-primaryColor border-[1px]">
         <div className="flex flex-row items-center justify-center lg:gap-x-4 gap-x-2">
           <img
             className="w-10 lg:w-12"

@@ -9,7 +9,7 @@ const ButtonPrimary = React.forwardRef(
   ) => {
     return (
       <button
-        className={`text-base font-bold transition-all rounded-full ${
+        className={`text-sm md:text-base font-bold transition-all rounded-full ${
           primary
             ? "bg-primaryColor hover:bg-hoverPrimaryColor text-whiteColor"
             : "bg-transparent border border-primaryColor text-primaryColor hover:bg-primaryColor hover:bg-opacity-10"

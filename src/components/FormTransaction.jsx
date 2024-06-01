@@ -181,7 +181,7 @@ const FormTransaction = () => {
   }, [errors]);
 
   return (
-    <div className="flex flex-col items-center w-full p-5 bg-white border shadow-2xl rounded-large border-borderColor">
+    <div className="flex flex-col items-center w-full p-5 bg-white border shadow-2xl rounded-large border-primaryColor">
       <div className="flex flex-col w-full gap-y-1">
         <div className="flex items-end justify-between">
           <p className="text-base font-semibold">Amount</p>
@@ -228,7 +228,7 @@ const FormTransaction = () => {
           </ButtonPrimary>
         </div>
       ) : (
-        <button className="w-full text-[12px] text-lg px-4 py-3 font-bold text-white rounded-full opacity-50 pointer-events-none bg-blackColor select-none">
+        <button className="w-full text-[12px] text-lg px-4 py-3 font-bold text-white rounded-full opacity-50 pointer-events-none bg-primaryColor select-none">
           Please connect your wallet
         </button>
       )}
