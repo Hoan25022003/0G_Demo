@@ -1,7 +1,7 @@
 const Footer = () => (
-  <footer className="bg-gradient-to-r from-[#FE7D82] to-[#FFAF90]">
+  <footer className="bg-gradient-to-r from-secondColor to-[#FFAF90]">
     <div className="max-w-screen-xl px-10 mx-auto">
-      <div className="grid grid-cols-2 gap-8 px-4 py-6 ml-6 lg:py-8 md:grid-cols-5 sm:ml-10 lg:ml-12">
+      <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5">
         <a
           href={"/"}
           className="flex items-start justify-start gap-x-3 lg:gap-x-5"

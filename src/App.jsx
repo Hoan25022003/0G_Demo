@@ -15,7 +15,7 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <div className="relative min-h-screen pb-[120px] overflow-hidden xl:pb-0">
           <img
-            className="absolute top-0 left-0 z-0 object-cover w-full h-full opacity-50"
+            className="absolute top-0 left-0 z-0 object-cover w-full h-full opacity-40"
             src="/img_background.png"
           ></img>
 

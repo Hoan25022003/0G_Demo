@@ -190,7 +190,7 @@ const FormTransaction = () => {
 
   return isConnected ? (
     joinPool ? (
-      <div className="flex flex-col items-center w-full p-5 bg-white border shadow-2xl rounded-large border-primaryColor">
+      <div className="flex flex-col items-center w-full p-5 bg-white shadow-2xl rounded-large">
         <div className="flex flex-col w-full gap-y-1">
           <div className="flex items-end justify-between">
             <p className="text-base font-semibold">Amount</p>
@@ -221,7 +221,7 @@ const FormTransaction = () => {
             />
           </div>
         </div>
-        <div className="grid w-full grid-cols-2 px-5 font-bold gap-x-5">
+        <div className="grid w-full grid-cols-2 font-bold gap-x-5">
           <button
             className="uppercase transition-all bg-transparent border-2 rounded-full hover:bg-secondColor hover:bg-opacity-10 text-secondColor border-secondColor"
             onClick={onClickMax}
@@ -238,7 +238,7 @@ const FormTransaction = () => {
       </div>
     ) : (
       <ButtonPrimary
-        className="w-full px-4 py-3 capitalize"
+        className="w-full px-4 py-3 font-semibold uppercase"
         onClick={onJoinPool}
       >
         Join pool
