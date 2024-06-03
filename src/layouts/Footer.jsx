@@ -1,6 +1,20 @@
 const Footer = () => (
   <footer className="bg-gradient-to-r from-secondColor to-[#FFAF90]">
     <div className="max-w-screen-xl px-10 mx-auto">
+    <div className="flex flex-col gap-8 px-4 py-6 lg:py-8 md:grid-cols-5">
+        <p className="text-[30px] md:text-[40px] text-white text-center justify-center mt-5 md:mt-10 font-medium">
+          Join the 0G Community and Unlock <br/>Web3 Full Potential Today
+        </p>
+
+        <p className="text-base md:text-xl text-white text-center justify-center ">
+        Discover the power of 0G and revolutionize your Web3 experience.
+        </p>
+        <div className="flex flex-row items-center justify-center gap-x-2 lg:gap-x-3">
+          <button type="button" className="px-5 py-3 md:px-8 md:py-3 text-sm lg:text-xl font-medium bg-white text-hoverPrimaryColor rounded-full border">Learn More</button>
+          <button type="button" className="px-5 py-3 md:px-8 md:py-3 text-sm lg:text-xl font-medium text-white  bg-[#FF9B8B] rounded-full border border-white ">Get In Touch</button>
+        </div>
+      </div>
+        
       <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5">
         <a
           href={"/"}
@@ -14,27 +28,27 @@ const Footer = () => (
           </h2>
           <ul className="font-medium text-white">
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/build" className="transition-all hover:text-primary">
                 Build
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/testnet-guide" className="transition-all hover:text-primary">
                 Testnet
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/node-guide" className="transition-all hover:text-primary">
                 Run a node
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://faucet.0g.ai/" className="transition-all hover:text-primary">
                 Faucet
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://docs.0g.ai/0g-doc" className="transition-all hover:text-primary">
                 Docs
               </a>
             </li>
@@ -46,17 +60,17 @@ const Footer = () => (
           </h2>
           <ul className="font-medium text-white">
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/blog" className="transition-all hover:text-primary">
                 Blog
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/ama" className="transition-all hover:text-primary">
                 AMAs
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/faq" className="transition-all hover:text-primary">
                 FAQs
               </a>
             </li>
@@ -68,27 +82,27 @@ const Footer = () => (
           </h2>
           <ul className="font-medium text-white dark:text-gray-400">
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/community" className="transition-all hover:text-primary">
                 Community
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/partners" className="transition-all hover:text-primary">
                 Partner
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/press" className="transition-all hover:text-primary">
                 Press
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfe_-fBaNj93p2xkeWboTg492kTct36QUJURcJPLzRuv7YFfQ/viewform" className="transition-all hover:text-primary">
                 Careers
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="transition-all hover:text-primary">
+              <a href="https://0g.ai/mediakit" className="transition-all hover:text-primary">
                 Media kit
               </a>
             </li>

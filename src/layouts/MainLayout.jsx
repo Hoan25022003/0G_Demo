@@ -13,11 +13,14 @@ const MainLayout = () => {
           <h1 className="font-medium text-[80px] sm:text-[90px] lg:text-[100px] leading-[1] opacity-90 stats-text-shadow capitalize ">
             0G SALE
           </h1>
-          <p className="text-lg text-center sm:text-xl lg:text-start stats-text-shadow">
+          <h3 className="font-medium text-[30px] leading-[1] opacity-90 items-center stats-text-shadow capitalize ">
+            The First Modular AI Chain
+          </h3>
+          {/* <p className="text-lg text-center sm:text-xl lg:text-start stats-text-shadow">
             0G is an infinitely scalable data availability layer and data
             storage system that provides the necessary infrastructure to scale
             Web3 and bring novel use cases on-chain.
-          </p>
+          </p> */}
 
           <TableContent />
 

@@ -1,7 +1,15 @@
+import Tooltip from "@mui/material/Tooltip";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+// import ListAltIcon from "@mui/icons-material/ListAlt";
+// import TuneIcon from "@mui/icons-material/Tune";
+
 const TableContent = () => {
   return (
     <div className="w-full overflow-x-auto shadow-md rounded-lg border-[1px] border-primaryColor">
-      <div className="w-full p-4 bg-gradient-to-r from-primaryColor to-secondColor">
+      <div className="flex flex-row w-full p-4 bg-gradient-to-r from-primaryColor to-secondColor items-center gap-x-1 md:gap-x-2">
+        <Tooltip title="Verified Collection" placement="top">
+            <CheckCircleIcon className="text-white w-[12px] md:w-[30px]" />
+        </Tooltip>
         <h2 className="text-xl font-medium text-white uppercase">Live seed</h2>
       </div>
 
