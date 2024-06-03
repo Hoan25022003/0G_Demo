@@ -6,9 +6,9 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const TableContent = () => {
   return (
     <div className="w-full overflow-x-auto shadow-md rounded-lg border-[1px] border-primaryColor">
-      <div className="flex flex-row w-full p-4 bg-gradient-to-r from-primaryColor to-secondColor items-center gap-x-1 md:gap-x-2">
+      <div className="flex flex-row items-center w-full p-4 bg-gradient-to-r from-primaryColor to-secondColor gap-x-1 md:gap-x-2">
         <Tooltip title="Verified Collection" placement="top">
-            <CheckCircleIcon className="text-white w-[12px] md:w-[30px]" />
+          <CheckCircleIcon className="text-white" width={20} />
         </Tooltip>
         <h2 className="text-xl font-medium text-white uppercase">Live seed</h2>
       </div>

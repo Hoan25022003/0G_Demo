@@ -14,6 +14,18 @@
     @apply mx-auto xl:w-[1200px] lg:w-[90%] sm:w-[75%] w-[90%];
   }
 
+  .animate-opacity {
+    animation: showOpacity ease-in-out 250ms;
+    @keyframes showOpacity {
+      from {
+        opacity: 0.3;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
   .tooltip {
     position: relative;
     display: inline-block;
