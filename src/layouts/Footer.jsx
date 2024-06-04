@@ -160,7 +160,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 px-4 py-6 lg:py-8 gap-y-3 md:gap-y-5">
+      <div className="flex flex-col gap-8 px-4 py-6 lg:py-8 gap-y-3 md:gap-y-5 md:mt-2">
         <h1 className="md:text-xl font-bold text-white text-base">Subscribe</h1>
         <p className="text-base text-white">
           Join our newsletter to stay up to date on features and releases.
@@ -186,12 +186,12 @@ const Footer = () => (
           </form>
         </div>
 
-        <p className="text-sm text-white">
+        <p className="text-sm text-white mt-1">
           By subscribing you agree to provide consent to receive updates from
           our company.
         </p>
       </div>
-      <hr className="border-white sm:mx-auto" />
+      <hr className="border-white sm:mx-auto mt-3 md:mt-6" />
 
       <div className="grid items-center justify-center grid-rows-2 gap-2 px-4 py-5 sm:flex sm:justify-between">
         <span className="text-sm text-white dark:text-gray-300 sm:text-center">

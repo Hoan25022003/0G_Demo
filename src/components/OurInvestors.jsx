@@ -5,13 +5,13 @@ const OurInvestors = () => {
         <img src="hackvc.svg" alt="" />
         <img src="blank_less.svg" alt="" />
       </div>
-      <div className="relative grid items-center grid-cols-5 py-4 mt-2 sm:px-2 sm:mt-6 gap-x-5 sm:gap-x-9 lg:gap-x-12">
+      {/* <div className="relative grid items-center grid-cols-5 py-4 mt-2 sm:px-2 sm:mt-6 gap-x-5 sm:gap-x-9 lg:gap-x-12">
         <img src="trgc.svg" alt="" />
         <img src="imo.svg" alt="" />
         <img src="wise_3.svg" alt="" />
         <img src="artichoke.svg" alt="" />
         <img src="crypto_time.svg" alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };
