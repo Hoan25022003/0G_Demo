@@ -22,7 +22,7 @@ export default {
         whiteColor: "#ffffff",
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 34s linear infinite",
+        "infinite-scroll": "infinite-scroll 80s linear infinite",
       },
       keyframes: {
         "infinite-scroll": {
