@@ -12,7 +12,7 @@ const ButtonPrimary = React.forwardRef(
         className={`text-sm md:text-base lg:text-lg font-bold transition-all rounded-full ${
           primary
             ? "bg-primaryColor hover:bg-hoverPrimaryColor text-whiteColor"
-            : "bg-transparent border border-primaryColor text-primaryColor hover:bg-primaryColor hover:bg-opacity-10"
+            : "bg-transparent border border-primaryColor text-primaryColor hover:bg-secondColor hover:bg-opacity-10"
         } ${className} ${loading && "bg-opacity-40 pointer-events-none"}`}
         onClick={onClick}
         ref={ref}

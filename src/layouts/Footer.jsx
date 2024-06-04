@@ -160,33 +160,33 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 px-4 py-6 lg:py-8 gap-y-3 md:gap-y-5">
-        <h1 className="md:text-xl font-bold text-white text-base">Subscribe</h1>
-        <p className="text-base text-white">
+      <div className="flex flex-col items-center gap-5 py-6 mb-8 sm:px-4 gap-y-3 md:gap-y-5">
+        <h1 className="text-3xl font-bold text-white">Subscribe</h1>
+        <p className="text-lg text-center text-white">
           Join our newsletter to stay up to date on features and releases.
         </p>
 
-        <div className="w-full flex justify-start items-center">
-          <form className="w-full mx-auto flex flex-row items-center gap-x-1 lg:gap-x-2">
+        <div className="flex items-center justify-start w-full lg:w-1/2 sm:w-3/4">
+          <form className="flex flex-row items-center w-full mx-auto gap-x-2">
             <div className="w-full">
               <input
                 type="email"
                 id="email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full block w-full px-3 py-1 md:px-5 md:py-4"
+                className="block w-full px-5 py-3 text-base border border-gray-300 rounded-full outline-none text-blackColor bg-gray-50"
                 placeholder="name@email.com"
                 required
               />
             </div>
             <button
               type="submit"
-              className="text-white bg-primaryColor font-medium rounded-full text-sm px-3 py-1 md:px-5 md:py-4 text-center"
+              className="px-5 py-3 text-base font-medium text-center text-white rounded-full bg-primaryColor"
             >
               Subscribe
             </button>
           </form>
         </div>
 
-        <p className="text-sm text-white">
+        <p className="text-sm text-center text-white">
           By subscribing you agree to provide consent to receive updates from
           our company.
         </p>
