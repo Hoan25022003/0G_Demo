@@ -115,7 +115,7 @@ const Footer = () => (
           <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
             Ecosystem
           </h2>
-          <ul className="font-medium text-white dark:text-gray-400">
+          <ul className="font-medium text-white ">
             <li className="mb-4">
               <a
                 href="https://0g.ai/community"
