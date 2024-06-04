@@ -26,6 +26,12 @@
     }
   }
 
+  .object-background {
+    object-fit: cover;
+    object-position: top center;
+    scale: 1.5;
+  }
+
   .tooltip {
     position: relative;
     display: inline-block;
