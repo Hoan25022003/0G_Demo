@@ -3,17 +3,15 @@ import DropHover from "../components/DropHover";
 
 const Header = () => {
   return (
-    <nav className="z-50 flex flex-row items-center justify-between px-5 md:px-12 lg:px-16 gap-x-1 lg:gap-x-1">
-      <a
-        href={"/"}
-        className="flex items-center justify-start gap-x-3 md:gap-x-5 lg:gap-x-1"
-      >
+    <nav className="z-50 flex flex-row items-center justify-between px-5 md:px-12 lg:px-16 md:gap-x-4">
+      <a href={"/"} className=" flex items-start justify-start">
         <img
           className="w-[80px] md:w-[90px] lg:w-[110px]"
           src="logo_0g.png"
           alt=""
         />
       </a>
+
       <DropHover />
 
       <div className="flex items-center gap-x-2 md:gap-x-4">
