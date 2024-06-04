@@ -1,6 +1,7 @@
 import FormTransaction from "../components/FormTransaction";
 import TableContent from "../components/TableContent";
 import OurInvestors from "../components/OurInvestors";
+import TableLogo from "../components/TableLogo";
 
 const MainLayout = () => {
   return (
@@ -34,6 +35,7 @@ const MainLayout = () => {
           Our Investors
         </h1>
         <OurInvestors />
+        <TableLogo />
       </div>
     </div>
   );
