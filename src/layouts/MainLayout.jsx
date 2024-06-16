@@ -1,7 +1,6 @@
 import FormTransaction from "../components/FormTransaction";
 import TableContent from "../components/TableContent";
 import OurInvestors from "../components/OurInvestors";
-import TableLogo from "../components/TableLogo";
 
 const MainLayout = () => {
   return (
@@ -31,11 +30,10 @@ const MainLayout = () => {
         </div>
       </div>
       <div className="items-center w-full px-3 py-2 mt-2 lg:mb-20">
-        <h1 className="p-2 font-medium text-[30px] md:text-[40px] leading-[1] stats-text-shadow capitalize text-center">
+        <h1 className="p-2 font-medium text-[40px] leading-[1] stats-text-shadow capitalize text-center">
           Our Investors
         </h1>
         <OurInvestors />
-        <TableLogo />
       </div>
     </div>
   );

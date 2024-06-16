@@ -1,5 +1,34 @@
 import { useEffect, useRef } from "react";
 
+const listSrc = [
+  "imo.svg",
+  "svgexport-100.svg",
+  "svgexport-102.svg",
+  "svgexport-103.svg",
+  "svgexport-104.svg",
+  "svgexport-105.svg",
+  "svgexport-106.svg",
+  "svgexport-107.svg",
+  "svgexport-108.svg",
+  "svgexport-109.svg",
+  "svgexport-110.svg",
+  "svgexport-111.svg",
+  "svgexport-112.svg",
+  "svgexport-113.svg",
+  "svgexport-114.svg",
+  "svgexport-115.svg",
+  "svgexport-116.svg",
+  "svgexport-117.svg",
+  "svgexport-118.svg",
+  "svgexport-119.svg",
+  "svgexport-120.svg",
+  "svgexport-121.svg",
+  "svgexport-122.svg",
+  "svgexport-123.svg",
+  "svgexport-124.svg",
+  "svgexport-125.svg",
+];
+
 const TableLogo = () => {
   const logosRef = useRef(null);
 
@@ -16,126 +45,13 @@ const TableLogo = () => {
     <div className="w-full mt-10 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
       <ul
         ref={logosRef}
-        className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-56 animate-infinite-scroll"
+        className="flex items-center justify-center md:justify-start animate-infinite-scroll"
       >
-        <li>
-          <img className="" src="imo.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-100.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-101.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-102.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-103.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-104.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-105.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-106.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-107.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-108.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-109.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-110.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-111.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-112.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-113.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-114.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-115.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-116.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-117.svg" alt="" />
-        </li>
-
-        <li>
-          <img src="svgexport-118.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-119.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-120.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-121.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-122.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-123.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-124.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-125.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-126.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-127.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-128.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-129.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-130.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-131.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-132.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-133.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-134.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-135.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-136.svg" alt="" />
-        </li>
-        <li>
-          <img src="svgexport-137.svg" alt="" />
-        </li>
+        {listSrc.map((src, i) => (
+          <li key={i} className="mx-6 lg:mx-8">
+            <img className="lg:max-w-56 max-w-[300px]" src={src} alt="" />
+          </li>
+        ))}
       </ul>
     </div>
   );
