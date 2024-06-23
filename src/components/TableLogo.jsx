@@ -29,25 +29,25 @@ const listSrc = [
 ];
 
 const TableLogo = () => {
-  const logosRef = useRef(null);
+  // const logosRef = useRef(null);
 
-  useEffect(() => {
-    if (logosRef.current) {
-      const ul = logosRef.current;
-      const clonedUl = ul.cloneNode(true);
-      clonedUl.setAttribute("aria-hidden", "true");
-      ul.parentNode.insertBefore(clonedUl, ul.nextSibling);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (logosRef.current) {
+  //     const ul = logosRef.current;
+  //     const clonedUl = ul.cloneNode(true);
+  //     clonedUl.setAttribute("aria-hidden", "true");
+  //     ul.parentNode.insertBefore(clonedUl, ul.nextSibling);
+  //   }
+  // }, []);
 
   return (
     <div className="w-full mt-10 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
       <ul
-        ref={logosRef}
+        // ref={logosRef}
         className="flex items-center justify-center md:justify-start animate-infinite-scroll"
       >
         {listSrc.map((src, i) => (
-          <li key={i} className="mx-6 lg:mx-8">
+          <li key={i} className="mx-5 lg:mx-8">
             <img className="lg:max-w-56 max-w-[300px]" src={src} alt="" />
           </li>
         ))}
