@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 
 const listSrc = [
-  "imo.svg",
   "svgexport-100.svg",
   "svgexport-102.svg",
   "svgexport-103.svg",
