@@ -221,7 +221,7 @@ const FormTransaction = () => {
             />
           </div>
         </div>
-        <div className="grid w-full grid-cols-2 font-bold gap-x-5 items-center justify-center">
+        <div className="w-full font-bold gap-x-5 items-center justify-center">
           {/* <button
             className="uppercase transition-all bg-transparent border-2 rounded-full hover:bg-secondColor hover:bg-opacity-10 text-secondColor border-secondColor"
             onClick={onClickMax}
