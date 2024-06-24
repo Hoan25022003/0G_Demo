@@ -229,7 +229,7 @@ const FormTransaction = () => {
             Max
           </button> */}
           <ButtonPrimary
-            className="px-4 py-[14px] uppercase"
+            className="w-full px-4 py-[14px] uppercase"
             onClick={onClickSend}
           >
             Send
