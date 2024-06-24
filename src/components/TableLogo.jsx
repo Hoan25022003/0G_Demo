@@ -45,7 +45,7 @@ const TableLogo = () => {
           <img src={"svgexport-121.svg"} alt="" />
         </div>
 
-        <div className="w-full flex flex-row gap-x-5 gap-y-5 justify-center items-center mt-4">
+        <div className="w-full flex flex-row gap-x-5 gap-y-5 justify-center items-center mt-6">
           {/* Dong3 */}
           <img className="w-[80px]" src={"svgexport-104.svg"} alt="" />
           <img className="w-[80px]" src={"svgexport-114.svg"} alt="" />
