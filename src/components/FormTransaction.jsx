@@ -221,15 +221,15 @@ const FormTransaction = () => {
             />
           </div>
         </div>
-        <div className="w-full font-bold gap-x-5 items-center justify-center">
-          {/* <button
+        <div className="grid w-full grid-cols-2 font-bold gap-x-5">
+          <button
             className="uppercase transition-all bg-transparent border-2 rounded-full hover:bg-secondColor hover:bg-opacity-10 text-secondColor border-secondColor"
             onClick={onClickMax}
           >
             Max
-          </button> */}
+          </button>
           <ButtonPrimary
-            className="w-full px-4 py-[14px] uppercase"
+            className="px-4 py-[14px] uppercase"
             onClick={onClickSend}
           >
             Send
