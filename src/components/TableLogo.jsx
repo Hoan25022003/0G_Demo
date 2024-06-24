@@ -30,7 +30,7 @@ const listSrc = [
 
 const TableLogo = () => {
   return (
-    <div className="w-full mt-2 items-center inline-flex flex-nowrap overflow-hidden sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+    <div className="w-full mt-2 sm:mt-10 items-center inline-flex flex-nowrap overflow-hidden sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
       <div className="w-full flex flex-col sm:hidden">
         <div className="w-full grid grid-cols-4 gap-x-5 gap-y-7 justify-center items-center mt-4">
           {/* Dong1 */}
