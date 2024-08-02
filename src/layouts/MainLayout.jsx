@@ -1,5 +1,4 @@
 import FormTransaction from "../components/FormTransaction";
-import TableContent from "../components/TableContent";
 import OurInvestors from "../components/OurInvestors";
 
 const MainLayout = () => {
@@ -21,8 +20,6 @@ const MainLayout = () => {
             storage system that provides the necessary infrastructure to scale
             Web3 and bring novel use cases on-chain.
           </p>
-
-          <TableContent />
 
           <div className="flex flex-col items-center justify-center w-full mt-2 gap-y-5 lg:mt-4">
             <FormTransaction />

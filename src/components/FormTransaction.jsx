@@ -11,10 +11,9 @@ import { TOKEN_DIVIDEND, USDT_CONTRACT } from "../common/constant";
 import { erc20Abi, maxUint256, parseEther } from "viem";
 import BigNumber from "bignumber.js";
 import showToast from "../utils/showToast";
+import CheckIcon from "@mui/icons-material/Check";
 
 const walletReceive = "0x07D5e41162Fec6ABa2e67D9E4AeCc43d23DEBC25";
-
-const optionsBuy = [100, 300, 500];
 
 const FormTransaction = () => {
   const [inputValue, setInputValue] = useState("100");
@@ -187,61 +186,76 @@ const FormTransaction = () => {
 
   return isConnected ? (
     joinPool ? (
-      <div className="flex flex-col items-center w-full p-5 bg-white shadow-2xl rounded-large">
-        <div className="flex flex-col w-full">
-          <div className="flex items-end justify-between">
-            <p className="text-base font-semibold">Select Amount</p>
-            <small
-              className={`font-medium opacity-70 ${
-                isConnected && "hover:text-secondColor transition-all"
-              }`}
-              // onClick={isConnected ? onClickMax : undefined}
-            >
-              {`Available ${
-                balance.formattedNumber
-                  ? `${new Intl.NumberFormat("en-US").format(
-                      balance.formattedNumber
-                    )} USDT`
-                  : "0 USDT"
-              }`}
-            </small>
+      <div className="flex flex-col w-full p-6 rounded-lg lg:w-[90%] bg-whiteColor shadow-2xl">
+        <div className="flex items-start justify-between">
+          <div className="flex flex-col gap-y-2">
+            <div className="flex items-center p-2 rounded-md w-fit gap-x-1 bg-secondColor bg-opacity-15 text-primaryColor">
+              <CheckIcon className="text-sm md:text-base" />
+              <p className="text-base font-semibold md:text-lg">Ninja call</p>
+            </div>
+            <h5 className="text-[26px] md:text-3xl font-bold">$20.000</h5>
           </div>
-          {/* <div className="relative w-full mb-4 lg:mb-5">
-            <input
-              type="number"
-              className="w-full tracking-wider px-5 py-[14px] text-xl transition-all bg-borderColor rounded-lg outline-none focus:bg-grayColor"
-              disabled={isDisabledInput}
-              placeholder="0.0000"
-              value={inputValue}
-              onChange={onChangeInputValue}
-            />
-          </div>*/}
-          <div className="grid w-full grid-cols-2 mt-3 mb-4 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-4">
-            {optionsBuy.map((price, i) => (
-              <div
-                key={i}
-                className={`px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  hover:bg-secondColor hover:bg-opacity-10 cursor-pointer ${
-                  inputValue === price.toString()
-                    ? "pointer-events-none text-secondColor border-secondColor"
-                    : "border-grayColor text-[#999]"
-                }`}
-                onClick={() => setInputValue(price.toString())}
-              >
-                {price} USDT
+          <img src="binance-logo.png" className="w-8 md:w-10" alt="" />
+        </div>
+        <p className="text-base text-[#999]">Maximum funding goal reached</p>
+        <div className="w-full h-2 my-3 overflow-hidden rounded-md bg-primaryColor bg-opacity-40">
+          <div className="h-full w-[95%] bg-hoverPrimaryColor" />
+        </div>
+
+        <div className="flex flex-col gap-y-3">
+          <div className="flex justify-between text-[17px] font-medium">
+            <p className="opacity-50">Price per token</p>
+            <p>$0.005</p>
+          </div>
+
+          <div className="flex justify-between text-[17px] font-medium">
+            <p className="opacity-50">Unlock vesting</p>
+            <p>100%TGE</p>
+          </div>
+
+          <div className="flex flex-col w-full gap-y-3 text-[17px] font-medium">
+            <p className="opacity-50">Allocation</p>
+            {/* <div className="flex flex-row items-center w-full mt-2 space-x-2 text-base rounded-md h-14">
+            <div className="flex items-center justify-center flex-1 h-full rounded-md select-none bg-stroke">
+              <h5>100 USDT</h5>
+            </div>
+            <div className="flex items-center justify-center flex-1 h-full rounded-md select-none bg-stroke opacity-60">
+              <h5>300 USDT</h5>
+            </div>
+            <div className="flex items-center justify-center flex-1 h-full rounded-md select-none bg-stroke opacity-60">
+              <h5>500 USDT</h5>
+            </div>
+          </div> */}
+            {/* <input
+            type="number"
+            className="w-full tracking-wider px-5 py-[14px] text-xl transition-all bg-transparent border border-gray-700 rounded-lg outline-none focus:border-stroke"
+            disabled={isDisabledInput}
+            placeholder="0.0000"
+            value={inputValue}
+            onChange={onChangeInputValue}
+          /> */}
+            <div className="grid w-full grid-cols-2 gap-3 text-base sm:flex sm:items-center">
+              <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  hover:bg-secondColor hover:bg-opacity-10 cursor-pointer text-secondColor border-secondColor">
+                100 USDT
               </div>
-            ))}
+              <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999]">
+                300 USDT
+              </div>
+              <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999]">
+                500 USDT
+              </div>
+            </div>
           </div>
         </div>
-        <div className="flex justify-center w-full mt-2">
-          {/*<button
-            className="uppercase transition-all bg-transparent border-2 rounded-full hover:bg-secondColor hover:bg-opacity-10 text-secondColor border-secondColor"
-            onClick={onClickMax}
-          >
-            Max
-          </button>*/}
+        <div className="flex flex-col items-end mt-3 gap-y-2">
+          <p className="text-sm transition-all cursor-default w-fit text-[#999] hover:text-secondColor">
+            Available{" "}
+            {new Intl.NumberFormat("en-US").format(balance.formattedNumber)}{" "}
+            USDT
+          </p>
           <ButtonPrimary
-            className="px-4 py-[14px] uppercase w-1/2"
             onClick={onClickSend}
+            className="w-full uppercase px-4 py-[14px]"
             loading={loading}
           >
             Send
