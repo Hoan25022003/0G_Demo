@@ -189,13 +189,13 @@ const FormTransaction = () => {
       <div className="flex flex-col w-full p-6 rounded-lg lg:w-[90%] bg-whiteColor shadow-2xl">
         <div className="flex items-start justify-between">
           <div className="flex flex-col gap-y-2">
-            <div className="flex items-center p-2 rounded-md w-fit gap-x-1 bg-secondColor bg-opacity-15 text-primaryColor">
+            <div className="flex items-center p-2 rounded-md w-fit gap-x-1 bg-secondColor bg-opacity-15 text-secondColor">
               <CheckIcon className="text-sm md:text-base" />
-              <p className="text-base font-semibold md:text-lg">Ninja call</p>
+              <p className="text-base font-semibold">Longhash ventures</p>
             </div>
             <h5 className="text-[26px] md:text-3xl font-bold">$20.000</h5>
           </div>
-          <img src="binance-logo.png" className="w-8 md:w-10" alt="" />
+          <img src="wxp6bd78dkldjvflf74r.png" className="w-8 md:w-10" alt="" />
         </div>
         <p className="text-base text-[#999]">Maximum funding goal reached</p>
         <div className="w-full h-2 my-3 overflow-hidden rounded-md bg-primaryColor bg-opacity-40">
@@ -203,19 +203,15 @@ const FormTransaction = () => {
         </div>
 
         <div className="flex flex-col mt-2 gap-y-3">
-          <div className="flex justify-between text-[17px] font-medium gap-x-1">
-            <p className="w-full opacity-50 lg:w-1/2 md:w-1/3">
-              Price per token
-            </p>
-            <span className="w-full h-5 border-b border-dotted border-blackColor"></span>
+          <div className="flex text-[17px] justify-between font-medium gap-x-1">
+            <p className="opacity-50">Price per token</p>
+            <span className="flex-1 h-5 border-b border-dotted border-blackColor"></span>
             <p>$0.005</p>
           </div>
 
           <div className="flex justify-between text-[17px] font-medium gap-x-1">
-            <p className="w-full opacity-50 lg:w-1/2 md:w-1/3">
-              Unlock vesting
-            </p>
-            <span className="w-full h-5 border-b border-dotted border-blackColor"></span>
+            <p className="opacity-50">Unlock vesting</p>
+            <span className="flex-1 h-5 border-b border-dotted border-blackColor"></span>
             <p>100%TGE</p>
           </div>
 
@@ -249,6 +245,9 @@ const FormTransaction = () => {
               </div>
               <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999]">
                 500 USDT
+              </div>
+              <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999] block sm:hidden">
+                1000 USDT
               </div>
             </div>
           </div>
