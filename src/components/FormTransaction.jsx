@@ -14,11 +14,13 @@ import showToast from "../utils/showToast";
 
 const walletReceive = "0x07D5e41162Fec6ABa2e67D9E4AeCc43d23DEBC25";
 
+const optionsBuy = [100, 300, 500];
+
 const FormTransaction = () => {
-  const [inputValue, setInputValue] = useState("");
-  const onChangeInputValue = useCallback((event) => {
-    setInputValue(event.target.value);
-  }, []);
+  const [inputValue, setInputValue] = useState("100");
+  // const onChangeInputValue = useCallback((event) => {
+  //   setInputValue(event.target.value);
+  // }, []);
   const { isConnected } = useAccount();
 
   const [errors, setErrors] = useState();
@@ -47,7 +49,7 @@ const FormTransaction = () => {
     },
   });
 
-  const isDisabledInput = loading || !address;
+  // const isDisabledInput = loading || !address;
 
   const { error: errorApprove, writeContractAsync: writeContractApproveAsync } =
     useWriteContract();
@@ -89,18 +91,18 @@ const FormTransaction = () => {
     setJoinPool(true);
   };
 
-  const onClickMax = useCallback(() => {
-    const balanceValue = balance?.value;
+  // const onClickMax = useCallback(() => {
+  //   const balanceValue = balance?.value;
 
-    if (!balanceValue) {
-      setInputValue("0");
-      return;
-    }
+  //   if (!balanceValue) {
+  //     setInputValue("0");
+  //     return;
+  //   }
 
-    const balanceValueBn = BigNumber(balanceValue.toString());
+  //   const balanceValueBn = BigNumber(balanceValue.toString());
 
-    setInputValue(balanceValueBn.div(TOKEN_DIVIDEND).toString());
-  }, [balance]);
+  //   setInputValue(balanceValueBn.div(TOKEN_DIVIDEND).toString());
+  // }, [balance]);
 
   //   const onChangeToAddress = useCallback(
   //     (event: ChangeEvent<HTMLInputElement>) => {
@@ -122,7 +124,6 @@ const FormTransaction = () => {
 
     try {
       sendValue = parseEther(inputValue);
-
       if (sendValue <= 0) {
         errorArr.push(`Amount '${inputValue}' is invalid.`);
       } else if (sendValue > (balance?.value ?? 0)) {
@@ -169,11 +170,9 @@ const FormTransaction = () => {
 
   useEffect(() => {
     if (isConfirmedSend) {
-      setLoading(false);
       showToast("success", "Transaction confirmed: " + sendHash, {
         autoClose: 5000,
       });
-    } else {
       setLoading(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -183,23 +182,20 @@ const FormTransaction = () => {
     if (errors) {
       showToast("error", errors);
       setLoading(false);
-    } else {
-      setLoading(false);
     }
   }, [errors]);
 
   return isConnected ? (
     joinPool ? (
       <div className="flex flex-col items-center w-full p-5 bg-white shadow-2xl rounded-large">
-        <div className="flex flex-col w-full gap-y-1">
+        <div className="flex flex-col w-full">
           <div className="flex items-end justify-between">
-            <p className="text-base font-semibold">Amount</p>
+            <p className="text-base font-semibold">Select Amount</p>
             <small
               className={`font-medium opacity-70 ${
-                isConnected &&
-                "hover:text-secondColor cursor-pointer transition-all"
+                isConnected && "hover:text-secondColor transition-all"
               }`}
-              onClick={isConnected ? onClickMax : undefined}
+              // onClick={isConnected ? onClickMax : undefined}
             >
               {`Available ${
                 balance.formattedNumber
@@ -210,7 +206,7 @@ const FormTransaction = () => {
               }`}
             </small>
           </div>
-          <div className="relative w-full mb-4 lg:mb-5">
+          {/* <div className="relative w-full mb-4 lg:mb-5">
             <input
               type="number"
               className="w-full tracking-wider px-5 py-[14px] text-xl transition-all bg-borderColor rounded-lg outline-none focus:bg-grayColor"
@@ -219,18 +215,34 @@ const FormTransaction = () => {
               value={inputValue}
               onChange={onChangeInputValue}
             />
+          </div>*/}
+          <div className="grid w-full grid-cols-2 mt-3 mb-4 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-4">
+            {optionsBuy.map((price, i) => (
+              <div
+                key={i}
+                className={`px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  hover:bg-secondColor hover:bg-opacity-10 cursor-pointer ${
+                  inputValue === price.toString()
+                    ? "pointer-events-none text-secondColor border-secondColor"
+                    : "border-grayColor text-[#999]"
+                }`}
+                onClick={() => setInputValue(price.toString())}
+              >
+                {price} USDT
+              </div>
+            ))}
           </div>
         </div>
-        <div className="grid w-full grid-cols-2 font-bold gap-x-5">
-          <button
+        <div className="flex justify-center w-full mt-2">
+          {/*<button
             className="uppercase transition-all bg-transparent border-2 rounded-full hover:bg-secondColor hover:bg-opacity-10 text-secondColor border-secondColor"
             onClick={onClickMax}
           >
             Max
-          </button>
+          </button>*/}
           <ButtonPrimary
-            className="px-4 py-[14px] uppercase"
+            className="px-4 py-[14px] uppercase w-1/2"
             onClick={onClickSend}
+            loading={loading}
           >
             Send
           </ButtonPrimary>

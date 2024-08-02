@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 const listSrc = [
   "svgexport-100.svg",
   "svgexport-102.svg",
