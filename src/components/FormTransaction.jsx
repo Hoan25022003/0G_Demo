@@ -255,7 +255,9 @@ const FormTransaction = () => {
         <div className="flex flex-col items-end mt-3 gap-y-2">
           <p className="text-sm transition-all cursor-default w-fit text-[#999] hover:text-secondColor">
             Available{" "}
-            {new Intl.NumberFormat("en-US").format(balance.formattedNumber)}{" "}
+            {balance?.formattedNumber
+              ? new Intl.NumberFormat("en-US").format(balance.formattedNumber)
+              : 0}{" "}
             USDT
           </p>
           <ButtonPrimary

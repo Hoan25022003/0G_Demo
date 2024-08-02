@@ -8,19 +8,19 @@ const MainLayout = () => {
         <div className="lg:flex-[5]">
           <img src="img_bear.webp" alt="" />
         </div>
-        <div className="flex flex-col gap-y-5 lg:flex-[4] items-center lg:items-start mt-10">
+        <div className="flex flex-col gap-y-4 lg:flex-[4] items-center lg:items-start mt-10">
           {/* <h1 className="font-medium text-[80px] sm:text-[90px] lg:text-[100px] leading-[1] opacity-90 stats-text-shadow capitalize sm:mt-10">
             0G SALE
           </h1> */}
-          <h3 className="text-[80px] font-bold leading-[1] opacity-90 stats-text-shadow uppercase">
-            Claim your whitelisted
+          <h3 className="text-[70px] font-bold leading-[1] opacity-90 stats-text-shadow uppercase">
+            $0G Whitelist
           </h3>
           <p className="text-lg text-center sm:text-xl lg:text-start stats-text-shadow">
             Only people who are whitelisted can successfully join the pool to
             pay $0G
           </p>
 
-          <div className="flex flex-col items-center justify-center w-full mt-2 gap-y-5 lg:mt-4">
+          <div className="flex flex-col items-center justify-center w-full gap-y-5 lg:mt-4">
             <FormTransaction />
           </div>
         </div>
