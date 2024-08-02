@@ -236,7 +236,7 @@ const FormTransaction = () => {
             value={inputValue}
             onChange={onChangeInputValue}
           /> */}
-            <div className="grid w-full grid-cols-2 gap-3 text-base sm:flex sm:items-center">
+            <div className="grid w-full grid-cols-2 gap-3 text-base">
               <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  hover:bg-secondColor hover:bg-opacity-10 cursor-pointer text-secondColor border-secondColor">
                 100 USDT
               </div>
@@ -246,7 +246,7 @@ const FormTransaction = () => {
               <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999]">
                 500 USDT
               </div>
-              <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999] block sm:hidden">
+              <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999]">
                 1000 USDT
               </div>
             </div>
