@@ -202,14 +202,20 @@ const FormTransaction = () => {
           <div className="h-full w-[95%] bg-hoverPrimaryColor" />
         </div>
 
-        <div className="flex flex-col gap-y-3">
-          <div className="flex justify-between text-[17px] font-medium">
-            <p className="opacity-50">Price per token</p>
+        <div className="flex flex-col mt-2 gap-y-3">
+          <div className="flex justify-between text-[17px] font-medium gap-x-1">
+            <p className="w-full opacity-50 lg:w-1/2 md:w-1/3">
+              Price per token
+            </p>
+            <span className="w-full h-5 border-b border-dotted border-blackColor"></span>
             <p>$0.005</p>
           </div>
 
-          <div className="flex justify-between text-[17px] font-medium">
-            <p className="opacity-50">Unlock vesting</p>
+          <div className="flex justify-between text-[17px] font-medium gap-x-1">
+            <p className="w-full opacity-50 lg:w-1/2 md:w-1/3">
+              Unlock vesting
+            </p>
+            <span className="w-full h-5 border-b border-dotted border-blackColor"></span>
             <p>100%TGE</p>
           </div>
 
