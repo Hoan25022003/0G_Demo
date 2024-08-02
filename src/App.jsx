@@ -13,7 +13,7 @@ const App = () => {
   return (
     <WagmiProvider config={dappConfig}>
       <QueryClientProvider client={queryClient}>
-        <div className="relative min-h-screen pb-[120px] overflow-hidden xl:pb-0">
+        <div className="relative min-h-screen pb-14  overflow-hidden xl:pb-0">
           <img
             className="absolute top-0 left-0 z-0 w-screen h-full object-background translate-y-[30px] sm:-translate-y-[15px]"
             src="/Background.svg"

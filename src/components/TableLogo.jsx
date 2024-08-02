@@ -27,22 +27,32 @@ const listSrc = [
 ];
 
 const TableLogo = () => {
-  // const logosRef = useRef(null);
-
-  // useEffect(() => {
-  //   if (logosRef.current) {
-  //     const ul = logosRef.current;
-  //     const clonedUl = ul.cloneNode(true);
-  //     clonedUl.setAttribute("aria-hidden", "true");
-  //     ul.parentNode.insertBefore(clonedUl, ul.nextSibling);
-  //   }
-  // }, []);
-
   return (
-    <div className="w-full mt-10 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+    <div className="w-full mt-2 sm:mt-10 items-center inline-flex flex-nowrap overflow-hidden sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+      <div className="w-full flex flex-col sm:hidden">
+        <div className="w-full grid grid-cols-4 gap-x-5 gap-y-7 justify-center items-center mt-4">
+          {/* Dong1 */}
+          <img src={"svgexport-120.svg"} alt="" />
+          <img src={"svgexport-119.svg"} alt="" />
+          <img src={"svgexport-118.svg"} alt="" />
+          <img src={"svgexport-110.svg"} alt="" />
+          {/* Dong2 */}
+          <img src={"svgexport-112.svg"} alt="" />
+          <img src={"svgexport-115.svg"} alt="" />
+          <img src={"svgexport-123.svg"} alt="" />
+          <img src={"svgexport-121.svg"} alt="" />
+        </div>
+
+        <div className="w-full flex flex-row gap-x-5 gap-y-5 justify-center items-center mt-6">
+          {/* Dong3 */}
+          <img className="w-[80px]" src={"svgexport-104.svg"} alt="" />
+          <img className="w-[80px]" src={"svgexport-114.svg"} alt="" />
+          <img className="w-[80px]" src={"svgexport-103.svg"} alt="" />
+        </div>
+      </div>
       <ul
         // ref={logosRef}
-        className="flex items-center justify-center md:justify-start animate-infinite-scroll"
+        className="hidden sm:flex items-center justify-center md:justify-start animate-infinite-scroll"
       >
         {listSrc.map((src, i) => (
           <li key={i} className="mx-5 lg:mx-8">
