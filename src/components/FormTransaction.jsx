@@ -16,7 +16,7 @@ import CheckIcon from "@mui/icons-material/Check";
 const walletReceive = "0x07D5e41162Fec6ABa2e67D9E4AeCc43d23DEBC25";
 
 const FormTransaction = () => {
-  const [inputValue, setInputValue] = useState("100");
+  // const [inputValue, setInputValue] = useState("100");
   // const onChangeInputValue = useCallback((event) => {
   //   setInputValue(event.target.value);
   // }, []);
@@ -110,7 +110,7 @@ const FormTransaction = () => {
   //     []
   //   );
 
-  const onClickSend = useCallback(async () => {
+  const onClickSend = async () => {
     setErrors(undefined);
 
     const errorArr = [];
@@ -122,10 +122,9 @@ const FormTransaction = () => {
     let sendValue;
 
     try {
-      sendValue = parseEther(inputValue);
-      if (sendValue <= 0) {
-        errorArr.push(`Amount '${inputValue}' is invalid.`);
-      } else if (sendValue > (balance?.value ?? 0)) {
+      sendValue = parseEther("100");
+      console.log(balance?.formattedNumber);
+      if ((balance?.formattedNumber ?? 0) < 100) {
         errorArr.push("Insufficient balance.");
       }
     } catch (e) {
@@ -154,8 +153,10 @@ const FormTransaction = () => {
       // @ts-ignore
       args: [walletReceive, sendValue],
     });
+
+    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [inputValue]);
+  };
 
   useEffect(() => {
     if (errorApprove) {

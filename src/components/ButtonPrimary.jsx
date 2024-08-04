@@ -37,7 +37,7 @@ ButtonPrimary.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   loading: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   primary: PropTypes.bool,
 };
 
