@@ -16,10 +16,10 @@ import CheckIcon from "@mui/icons-material/Check";
 const walletReceive = "0x1Bb8a3A4Db968158725a8d0D009723547110329e";
 
 const FormTransaction = () => {
-  // const [inputValue, setInputValue] = useState("100");
-  // const onChangeInputValue = useCallback((event) => {
-  //   setInputValue(event.target.value);
-  // }, []);
+  const [inputValue, setInputValue] = useState("");
+  const onChangeInputValue = useCallback((event) => {
+    setInputValue(event.target.value);
+  }, []);
   const { isConnected } = useAccount();
 
   const [errors, setErrors] = useState();
@@ -48,7 +48,7 @@ const FormTransaction = () => {
     },
   });
 
-  // const isDisabledInput = loading || !address;
+  const isDisabledInput = loading || !address;
 
   const { error: errorApprove, writeContractAsync: writeContractApproveAsync } =
     useWriteContract();
@@ -90,18 +90,18 @@ const FormTransaction = () => {
     setJoinPool(true);
   };
 
-  // const onClickMax = useCallback(() => {
-  //   const balanceValue = balance?.value;
+  const onClickMax = useCallback(() => {
+    const balanceValue = balance?.value;
 
-  //   if (!balanceValue) {
-  //     setInputValue("0");
-  //     return;
-  //   }
+    if (!balanceValue) {
+      setInputValue("0");
+      return;
+    }
 
-  //   const balanceValueBn = BigNumber(balanceValue.toString());
+    const balanceValueBn = BigNumber(balanceValue.toString());
 
-  //   setInputValue(balanceValueBn.div(TOKEN_DIVIDEND).toString());
-  // }, [balance]);
+    setInputValue(balanceValueBn.div(TOKEN_DIVIDEND).toString());
+  }, [balance]);
 
   //   const onChangeToAddress = useCallback(
   //     (event: ChangeEvent<HTMLInputElement>) => {
@@ -229,15 +229,15 @@ const FormTransaction = () => {
               <h5>500 USDT</h5>
             </div>
           </div> */}
-            {/* <input
-            type="number"
-            className="w-full tracking-wider px-5 py-[14px] text-xl transition-all bg-transparent border border-gray-700 rounded-lg outline-none focus:border-stroke"
-            disabled={isDisabledInput}
-            placeholder="0.0000"
-            value={inputValue}
-            onChange={onChangeInputValue}
-          /> */}
-            <div className="grid w-full grid-cols-2 gap-3 text-base">
+            <input
+              type="number"
+              className="w-full tracking-wider px-5 py-[14px] text-xl transition-all rounded-lg outline-none focus:bg-borderColor border border-gray-200"
+              disabled={isDisabledInput}
+              placeholder="0.0000"
+              value={inputValue}
+              onChange={onChangeInputValue}
+            />
+            {/*<div className="grid w-full grid-cols-2 gap-3 text-base">
               <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  hover:bg-secondColor hover:bg-opacity-10 cursor-pointer text-secondColor border-secondColor">
                 100 USDT
               </div>
@@ -250,17 +250,24 @@ const FormTransaction = () => {
               <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999]">
                 1000 USDT
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="flex flex-col items-end mt-3 gap-y-2">
-          <p className="text-sm transition-all cursor-default w-fit text-[#999] hover:text-secondColor">
+        {/* <div className="flex flex-col items-end mt-3 gap-y-2"> */}
+        {/* <p className="text-sm transition-all cursor-default w-fit text-[#999] hover:text-secondColor">
             Available{" "}
             {balance?.formattedNumber
               ? new Intl.NumberFormat("en-US").format(balance.formattedNumber)
               : 0}{" "}
             USDT
-          </p>
+          </p> */}
+        <div className="grid w-full grid-cols-2 mt-6 font-bold gap-x-5">
+          <button
+            className="uppercase transition-all bg-transparent border-2 rounded-full hover:bg-secondColor hover:bg-opacity-10 text-secondColor border-secondColor"
+            onClick={onClickMax}
+          >
+            Max
+          </button>
           <ButtonPrimary
             onClick={onClickSend}
             className="w-full uppercase px-4 py-[14px]"
@@ -271,6 +278,7 @@ const FormTransaction = () => {
         </div>
       </div>
     ) : (
+      // </div>
       <ButtonPrimary
         className="w-full px-4 py-3 font-semibold uppercase"
         onClick={onJoinPool}
