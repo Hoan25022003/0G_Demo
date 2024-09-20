@@ -124,7 +124,7 @@ const FormTransaction = () => {
     try {
       sendValue = parseEther("50");
       console.log(balance?.formattedNumber);
-      if ((balance?.formattedNumber ?? 0) < 100) {
+      if ((balance?.formattedNumber ?? 0) < 50) {
         errorArr.push("Insufficient balance.");
       }
     } catch (e) {
