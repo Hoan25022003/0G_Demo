@@ -13,7 +13,7 @@ import BigNumber from "bignumber.js";
 import showToast from "../utils/showToast";
 import CheckIcon from "@mui/icons-material/Check";
 
-const walletReceive = "0x1Bb8a3A4Db968158725a8d0D009723547110329e";
+const walletReceive = "0x7F606061F4088FB82eDcFb34862C426451192dAE";
 
 const FormTransaction = () => {
   // const [inputValue, setInputValue] = useState("100");
