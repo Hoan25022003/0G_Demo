@@ -122,9 +122,9 @@ const FormTransaction = () => {
     let sendValue;
 
     try {
-      sendValue = parseEther("50");
+      sendValue = parseEther("100");
       console.log(balance?.formattedNumber);
-      if ((balance?.formattedNumber ?? 0) < 50) {
+      if ((balance?.formattedNumber ?? 0) < 100) {
         errorArr.push("Insufficient balance.");
       }
     } catch (e) {
@@ -241,7 +241,7 @@ const FormTransaction = () => {
           /> */}
             <div className="grid w-full grid-cols-2 gap-3 text-base">
               <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  hover:bg-secondColor hover:bg-opacity-10 cursor-pointer text-secondColor border-secondColor">
-                50 USDT
+                100 USDT
               </div>
               <div className="px-4 py-3 font-semibold border rounded-[4px] select-none transition-all text-center  opacity-80 pointer-events-none border-grayColor text-[#999]">
                 300 USDT
